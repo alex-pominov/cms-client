@@ -1,0 +1,44 @@
+@import "~@coursems/components/lib/cjs/styles/main";
+@import "~bootstrap/scss/mixins";
+
+:root {
+  --app-height: 100%;
+}
+
+.container-fluid, .container {
+  padding: 1.75rem 1rem 2.5rem 1rem;
+}
+
+button {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+    padding: 2rem;
+  }
+}
+
+// Scroll bar for browsers except Safari
+@supports not (-webkit-touch-callout: none) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $gray-150 !important;
+    border-radius: 3px;
+
+    &:hover {
+      background: $gray-300 !important;
+      border-radius: 3px;
+    }
+  }
+}
